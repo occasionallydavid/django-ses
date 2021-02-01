@@ -213,10 +213,10 @@ class SESBackend(BaseEmailBackend):
 
             except ResponseError as err:
                 # Store failure information so to post process it if required
-                error_keys = ['status', 'reason', 'body', 'request_id',
-                              'error_code', 'error_message']
-                for key in error_keys:
-                    message.extra_headers[key] = getattr(err, key, None)
+                #error_keys = ['status', 'reason', 'body', 'request_id',
+                              #'error_code', 'error_message']
+                #for key in error_keys:
+                    #message.extra_headers[key] = getattr(err, key, None)
                 if not self.fail_silently:
                     raise
 
